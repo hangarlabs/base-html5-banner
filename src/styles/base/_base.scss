@@ -1,0 +1,60 @@
+body, html{
+	height:100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+// better default, can be changed to your convenience, comment the lines that you don't want
+* {
+	cursor: pointer;
+	box-sizing:inherit;
+	// transition: all .2s ease;
+	background-repeat: no-repeat;
+	position: relative;
+	user-select: none;
+	&:before,
+	&:after {
+		cursor: inherit;
+		// transition: all .2s ease;
+		box-sizing:inherit;
+		background-repeat: no-repeat;
+		position: relative;
+		user-select: none;
+	}
+}
+.loading {
+  .wrapper {
+    display: none;
+  }
+}
+.loaded {
+  .preloader {
+    display: none;
+  }
+}
+.preloader {
+  div {
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,.4);
+    border-top-color: rgba(255,255,255,.2);
+    border-left-color: rgba(255,255,255,.3);
+    border-right-color: rgba(255,255,255,.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    animation:preloader-rotate 1.7s infinite cubic-bezier(.17,.67,.83,.67);
+    + div {
+      animation:preloader-rotate 1.1s infinite cubic-bezier(.39,.11,.68,.99);
+    }
+  }
+}
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

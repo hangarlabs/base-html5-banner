@@ -1,0 +1,39 @@
+/**
+ * Vendor
+ */
+// http://bourbon.io/docs/
+@import 'bourbon';
+
+/**
+ * Base
+ */
+@import 'tools/normalize';
+// @import 'base/fonts';
+@import 'base/base';
+@import 'variables';
+
+body {
+  width: $banner-width;
+  height: $banner-height;
+  overflow: hidden;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    -moz-tap-highlight-color: transparent;
+}
+.preloader,
+.wrapper {
+  overflow: hidden;
+  width: $banner-width;
+  height: $banner-height;
+  background:#ccc;
+  font-family: $primary-font;
+}
+// put your stuff here
+
+@import 'states/white';
+@import 'states/step';
+
+@import 'layouts/centered';
