@@ -1,5 +1,20 @@
 # HANGAR HTML5 BANNERS
 
+## To mirror this repository to start a new project please do the following:
+
+    # Make a bare clone of the repository
+    git clone --bare https://github.com/hangarlabs/base-html5-banner.git
+    
+    # Mirror-push to the new repository (for example an existing bitbucket repo)
+    cd base-html5-banner.git
+    git push --mirror https://bitbucket.criticalmass.com/scm/[account]/[new-repository].git
+
+    # Remove our temporary local repository    
+    cd ..
+    rm -rf base-html5-banner.git
+
+
+
 ## Initial set up
 To prepare this project to run, you'll need to have nodejs `v0.12` or `up` installed in your computer.
 I suggest to use [NVM](https://github.com/creationix/nvm)  in order to install node and manage diference version easily.
