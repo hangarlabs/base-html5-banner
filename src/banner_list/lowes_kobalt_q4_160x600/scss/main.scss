@@ -1,0 +1,68 @@
+$banner-width: 160px;
+$banner-height: 600px;
+@import "../../../styles/main";
+// styles begin here
+.step[data-order='1'] {
+  div,
+  img {
+    position: absolute;
+    display: inline-block;
+  }
+  #cobalt-arm-1 {
+    top: 128px;
+    left: 158px;
+  }
+  #cobalt-arm-2 {
+    bottom: 118px;
+    left: 161px;
+  }
+  #lowes-logo {
+    bottom: 20px;
+    right: 39px;
+    width: 79px;
+    height: 36px;
+  }
+  #cobalt-logo {
+    left: -142px;
+    top: 138px;
+    width: 120px;
+    height: 22px;
+  }
+  #cpy-1 {
+    width: 81px;
+    height: 42px;
+    top: 76px;
+    left: -82px;
+  }
+  #cpy-2 {
+    width: 81px;
+    height: 43px;
+    left: -82px;
+    top: 281px;
+  }
+  #cpy-3 {
+    width: 90px;
+    height: 9px;
+    top: 169px;
+    left: -141px;
+  }
+  #copy-comp {
+    width: 145px;
+    height: 225px;
+    right: 160px;
+    bottom: 180px;
+    background-color: #000;
+    #snowflake {
+      width: 40px;
+      height: 97px;
+      right: 8px;
+      top: 113px;
+    }
+    #cpy-4 {
+      width: 96px;
+      height: 150px;
+      top: 14px;
+      left: 16px;
+    }
+  }
+}

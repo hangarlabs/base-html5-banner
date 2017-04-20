@@ -1,0 +1,9 @@
+// mixin for sprites
+@mixin sprite($src, $x: 0, $y: 0, $w: 0, $h: 0) {
+    width: $w + px;
+    height: $h + px;
+    opacity: 0;
+    background-image: $src;
+    background-repeat: no-repeat;
+    background-position: ($x + px) ($y + px);
+}

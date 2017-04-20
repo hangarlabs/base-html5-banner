@@ -1,47 +1,40 @@
 {
-	"name": "Base",
-	"title": "Base HTML5 Banners",
-	"version": "0.0.2",
-	"description": "Base",
-	"author": {
-		"name": "Hangar",
-		"email": "marcos@thehangar.cr"
-	},
-	"client": "Hangar",
-	"project": "Base",
-	"svp": "false",
-	"gsap": "true",
-	"adsys": "false",
-	"scss": "true",
-	"fonts": "true",
-	"bannersname": "728x90;300x250;300x600;160x600",
-	"devDependencies": {
-		"connect-livereload": "~0.4.0",
-		"grunt": "~0.4.2",
-		"grunt-autoprefixer": "~0.7.x",
-		"grunt-combine-media-queries": "~1.0.19",
-		"grunt-contrib-compress": "~0.12.0",
-		"grunt-contrib-connect": "~0.8.0",
-		"grunt-contrib-copy": "~0.7.x",
-		"grunt-contrib-cssmin": "~0.9.x",
-		"grunt-contrib-imagemin": "1.0.0",
-		"grunt-contrib-jade": "~0.12.0",
-		"grunt-contrib-sass": "~0.8.x",
-		"grunt-contrib-uglify": "~0.4.x",
-		"grunt-contrib-watch": "~0.6.x",
-		"grunt-newer": "~0.7.0",
-		"grunt-notify": "~0.3.0",
-		"grunt-processhtml": "0.3.9",
-		"grunt-svgmin": "^2.0.0",
-		"node-bourbon": "^4.2.3",
-		"serve-index": "~1.5.0",
-		"time-grunt": "~0.2.3"
-	},
-	"scripts": {
-		"prebuild": "gem install sass",
-		"build": "rm -Rf ./build && grunt build"
-	},
-	"engines": {
-    "node": ">=5.4.1"
+  "name": "Base",
+  "version": "1.0.0",
+  "title": "proyect name",
+  "client": "client",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "gulp distribute"
+  },
+  "engines": {
+    "node": ">=5.1.0"
+  },
+  "author": "marcos@thehangar.cr",
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-processhtml": "^1.1.0",
+    "gulp-pug": "^3.0.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sequence": "^0.4.5",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-zip": "^3.2.0",
+    "imagemin": "^5.2.1",
+    "imagemin-jpegoptim": "^5.0.0",
+    "imagemin-optipng": "^5.1.0",
+    "imagemin-pngquant": "^5.0.0",
+    "imagemin-svgo": "^5.1.0",
+    "gulp-copy": "0.0.2",
+    "gulp-rename": "^1.2.2",
+    "imagemin-jpeg-recompress": "^5.0.0",
+    "merge-stream": "^1.0.0"
   }
 }

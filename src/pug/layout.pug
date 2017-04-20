@@ -1,0 +1,21 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title
+    meta(name="viewport", content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='stylesheet', href='css/styles.css')
+    block metaSize
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://cdn.flashtalking.com/frameworks/js/gsap/1.17.0/plugins/CSSPlugin.min.js")
+    script(src="https://cdn.flashtalking.com/frameworks/js/gsap/1.17.0/TweenLite.min.js")
+    script(src="https://cdn.flashtalking.com/frameworks/js/gsap/1.17.0/TimelineMax.min.js")
+    script(src="https://cdn.flashtalking.com/frameworks/js/gsap/1.17.0/easing/EasePack.min.js")
+    script(src="js/main.js")
+  body.loading
+    .preloader
+      div
+      div
+    block content
+    script App_banner.getInstance().init();

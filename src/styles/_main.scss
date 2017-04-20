@@ -2,7 +2,7 @@
  * Vendor
  */
 // http://bourbon.io/docs/
-@import 'bourbon';
+// @import 'bourbon';
 
 /**
  * Base
@@ -11,6 +11,7 @@
 // @import 'base/fonts';
 @import 'base/base';
 @import 'variables';
+@import 'mixin';
 
 body {
   width: $banner-width;
