@@ -1,7 +1,7 @@
 # BASE HTML5 FOR BANNERS.
 
 ## Initial set up
-To prepare this project to run, you'll need to have nodejs `v5.1.0` or `up` installed in your computer.
+To prepare this project to run, you'll need to have nodejs `v6.1.0` or `up` installed in your computer.
 I suggest to use [NVM](https://github.com/creationix/nvm)  in order to install node and manage diference version easily.
 
 Install [editorconfig](http://editorconfig.org/) to keep end lines consistent between editor.
