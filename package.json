@@ -9,7 +9,7 @@
     "build": "gulp distribute"
   },
   "engines": {
-    "node": ">=5.1.0"
+    "node": ">=6.1.0"
   },
   "author": "marcos@thehangar.cr",
   "devDependencies": {
