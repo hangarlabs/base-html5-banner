@@ -2,7 +2,8 @@ extends ../src/layout
 
 block content
 
-  - var test = "asdasdasd";
+  - var test = title;
+  - var bannerConcept = banners.concept1.sizes;
 
   header
     .logo-wrap
@@ -22,7 +23,7 @@ block content
                     .panel-heading#headingOne(role="tab") 
                         h4.panel-title
                             a(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne")
-                                p= test
+                                p= bannerConcept
                     #collapseOne.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingOne")
                       .panel-body
                           iframe(src="./lowes_kobalt_q4_160x600/index.html" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600" width="160" allowfullscreen)

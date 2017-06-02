@@ -17,7 +17,7 @@ var reload = browserSync.reload;
 var generateIndex = require('./generate-index');
 var gulpCopy = require('gulp-copy');
 var gulpSequence = require('gulp-sequence');
-
+var data = require('gulp-data');
 
 // Pug Templates
 var pug = require('gulp-pug');
@@ -170,12 +170,16 @@ gulp.task('zips', function() {
 // Generate dinamic index.html for banners
 gulp.task('indexDinamic', function() {
 
-    console.log('>>>> STARTING TEMPLATES TASK 📄  <<<<');
+    console.log('>>>> STARTING DINAMIC INDEX TASK 📄  <<<<');
 
         return gulp.src(path.join(INDEX_PATH,'/base.pug'))
+
+            .pipe(data(function(file) {
+                return JSON.parse(fs.readFileSync('./src/data.json'))
+            }))
+
             .pipe(pug({
-                pretty: false,
-                data: './test.json'
+                pretty: false
             }))
             .pipe(rename("index.html"))
             .pipe(gulp.dest(DIST_PATH));
@@ -202,6 +206,7 @@ gulp.task('watch', ['scaffold', 'server'], function() {
     gulp.watch(SRC_PATH + '/**/scss/*.scss', ['sass', browserSync.reload]);
     gulp.watch(SRC_PATH + '/**/img/*.{png,jpeg,jpg,svg,gif}', ['images', browserSync.reload]);
     gulp.watch(SRC_PATH + '/**/pug/*.pug', ['templates', reload]);
+    gulp.watch(INDEX_PATH + '*', ['indexDinamic', reload]);
     gulp.watch(SRC_PATH + '/**/js/*.js', ['scripts', browserSync.reload]);
 });
 

@@ -1,0 +1,15 @@
+{
+	"title": "some other thing",
+	"client": "some thing",
+
+	"concepts": ["concept1","concept2"],
+
+	"banners": {
+		"concept1": {
+			"sizes": [ "Ford", "BMW", "Fiat" ]
+		},
+		"concept2": {
+			"sizes": [ "Ford", "BMW", "Fiat" ]
+		}
+	}
+}
