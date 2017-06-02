@@ -1,0 +1,63 @@
+extends ../src/layout
+
+block content
+
+  - var test = "asdasdasd";
+
+  header
+    .logo-wrap
+  .container.main
+    .col-sm-12
+      div
+        ul.nav.nav-tabs#mytabs(role="tablist")
+          li.active(role="tablist")
+            a(href="#concept1" aria-controls="concept1" role="tab" data-toggle="tab")|concept 1
+          li(role="tablist")
+            a(href="#concept2" aria-controls="concept2" role="tab" data-toggle="tab")|concept 2
+        .tab-content
+          .tab-pane.active#concept1(role="tabpanel")
+            .panel-group#accordion(role="tablist" aria-multiselectable="true")
+                //- 1
+                .panel.panel-default
+                    .panel-heading#headingOne(role="tab") 
+                        h4.panel-title
+                            a(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne")
+                                p= test
+                    #collapseOne.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingOne")
+                      .panel-body
+                          iframe(src="./lowes_kobalt_q4_160x600/index.html" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600" width="160" allowfullscreen)
+                //- 2
+                .panel.panel-default
+                    .panel-heading#headingTwo(role="tab") 
+                        h4.panel-title
+                            a(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+                                | BANNER TEST 300X250
+                    #collapseTwo.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingTwo")
+                      .panel-body
+                          iframe(src="./lowes_kobalt_q4_300x250/index.html" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="250" width="300" allowfullscreen)
+
+          .tab-pane#concept2(role="tabpanel")
+            .panel-group#accordion2(role="tablist" aria-multiselectable="true")
+                //- 1
+                .panel.panel-default
+                    .panel-heading#headingThree(role="tab") 
+                        h4.panel-title
+                            a(role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+                                | BANNER TEST 160x600
+                    #collapseThree.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingThree")
+                      .panel-body
+                          iframe(src="./lowes_kobalt_q4_160x600/index.html" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600" width="160" allowfullscreen)
+                //- 2
+                .panel.panel-default
+                    .panel-heading#headingFour(role="tab") 
+                        h4.panel-title
+                            a(role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour")
+                                | BANNER TEST 300x250
+                    #collapseFour.panel-collapse.collapse(role="tabpanel" aria-labelledby="headingFour")
+                      .panel-body
+                          iframe(src="./lowes_kobalt_q4_300x250/index.html" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="250" width="300" allowfullscreen)
+  //- footer.h-m-footer
+  //-   .container
+  //-     .row
+  //-       .col-md-6
+  //-       .col-md-6

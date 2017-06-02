@@ -1,0 +1,104 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title
+    meta(name="viewport", content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(type='text/javascript').
+      $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      });
+      $('.collapse').collapse();
+    style.
+      body {
+        background-color: #f6f6f6;
+      }
+      header {
+        background-color: #ed2924;
+        height: 600px;
+      }
+      iframe {
+        display: block;
+        margin: 0 auto;
+        border: 0px #ffffff none;
+      }
+      h2 {
+        font-family: DIN-Black, sans-serif;
+        color: #ed2924;
+        font-size: 26px;
+        font-weight: 600;
+      }
+      a {
+        color: #000!important;
+        font-size: 15px;
+      }
+      table>tbody>tr>td {
+        padding: 27px 3px!important;
+        border-top: 1px solid #818181 !important;
+        text-align: right;
+      }
+      .main {
+        margin-top: -450px;
+        background-color: #fff;
+        width: 1025px !important;
+      }
+      .banner-client {
+        margin-top: 60px;
+      }
+      .banner-name {
+        font-family: DIN-Medium, sans-serif;
+        border-top: 1px solid #fff;
+        font-weight: 300;
+        margin-top: 46px;
+        margin-bottom: 17px;
+      }
+      .banner-size {
+        font-family: DIN-Regular, sans-serif;
+        font-size: 15px;
+        text-transform: capitalize;
+      }
+      .zip {
+        font-family: DIN-Bold, sans-serif;
+        font-size: 15px;
+      }
+      .b-top {
+        border-top: 2px solid #000!important;
+      }
+      .backup_img {
+        padding-right: 20px;
+      }
+      .logo-wrap {
+        display: block;
+        margin: 0 auto;
+        height: 93px;
+        width: 367px;
+        padding: 80px 0;
+      }
+      .table {
+        margin-bottom: 94px;
+      }
+      #logo {
+        height: 93px;
+        width: 367px;
+      }
+      #footer-logo {
+        float: right;
+        height: 36px;
+        width: 35px;
+      }
+      .h-m-footer {
+        margin-top: 71px;
+        margin-bottom: 43px;
+      }
+      .h-m-footer p {
+        color: #999999;
+        font-size: 7px;
+        line-height: 30px;
+      }
+  body
+    block content

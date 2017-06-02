@@ -30,6 +30,7 @@ var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 // File paths
 var DIST_PATH = 'dist';
 var SRC_PATH = 'src/banner_list';
+var INDEX_PATH = 'src/';
 var ZIP_PATH = 'dist';
 var FOLDERS = getFolders(SRC_PATH);
 
@@ -167,11 +168,19 @@ gulp.task('zips', function() {
 });
 
 // Generate dinamic index.html for banners
-gulp.task('processHtml', function() {
-    return gulp.src('src/index.html')
-        .pipe(processhtml({data:{bannerList: generateIndex()}}))
-        .pipe(gulp.dest(DIST_PATH + '/'));
-});
+gulp.task('indexDinamic', function() {
+
+    console.log('>>>> STARTING TEMPLATES TASK 📄  <<<<');
+
+        return gulp.src(path.join(INDEX_PATH,'/base.pug'))
+            .pipe(pug({
+                pretty: false,
+                data: './test.json'
+            }))
+            .pipe(rename("index.html"))
+            .pipe(gulp.dest(DIST_PATH));
+
+})
 
 // Copy static folder for distribute
 gulp.task('copy', function () {
@@ -182,9 +191,9 @@ gulp.task('copy', function () {
 })
 
 // Tasks
-gulp.task('build', ['images', 'templates', 'sass', 'scripts', 'processHtml', 'copy'], function() {});
+gulp.task('build', ['images', 'templates', 'sass', 'scripts', 'indexDinamic', 'copy'], function() {});
 
-gulp.task('scaffold', ['images', 'templates', 'sass', 'scripts', 'processHtml'], function() {});
+gulp.task('scaffold', ['images', 'templates', 'sass', 'scripts', 'indexDinamic'], function() {});
 
 gulp.task('watch', ['scaffold', 'server'], function() {
 
