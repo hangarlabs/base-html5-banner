@@ -6,10 +6,10 @@
 
 	"banners": {
 		"concept1": {
-			"sizes": [ "Ford", "BMW", "Fiat" ]
+			"sizes": [ "Suzuki", "BMW", "Nissan" ]
 		},
 		"concept2": {
-			"sizes": [ "Ford", "BMW", "Fiat" ]
+			"sizes": [ "Suzuki", "BMW", "Nissan" ]
 		}
 	}
 }
