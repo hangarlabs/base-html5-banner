@@ -1,15 +1,15 @@
 {
-	"title": "some other thing",
-	"client": "some thing",
+	"title": "BANNERS HTML5 BASE",
+	"client": "HANGAR",
 
-	"concepts": ["concept1","concept2"],
+	"concepts": ["concept-1","concept-2"],
 
 	"banners": {
 		"concept1": {
-			"sizes": [ "Suzuki", "BMW", "Nissan" ]
+			"sizes": [ "BANNER TEST 160x600", "BANNER TEST 300x250", "BANNER TEST 300x600" ]
 		},
 		"concept2": {
-			"sizes": [ "Suzuki", "BMW", "Nissan" ]
+			"sizes": [ "BANNER TEST 160x600", "BANNER TEST 300x250", "BANNER TEST 300x600" ]
 		}
 	}
 }

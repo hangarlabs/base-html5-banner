@@ -9,11 +9,22 @@ html.no-js(lang='en')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
     script(type='text/javascript').
-      $('#myTabs a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
+
+      $(document).ready(function(){
+
+        $(".iframeRefresher").on( "click", function() {
+          $('iframe').each(function() {
+          this.contentWindow.location.reload(true);
+          });
+        });
+
+        $('#myTabs a').click(function (e) {
+          e.preventDefault()
+          $(this).tab('show')
+        });
+
       });
-      $('.collapse').collapse();
+
     style.
       body {
         background-color: #f6f6f6;
@@ -55,7 +66,7 @@ html.no-js(lang='en')
         border-top: 1px solid #fff;
         font-weight: 300;
         margin-top: 46px;
-        margin-bottom: 17px;
+        margin-bottom: 50px;
       }
       .banner-size {
         font-family: DIN-Regular, sans-serif;

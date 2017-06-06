@@ -91,7 +91,6 @@ App_banner.fn.step1 = function() {
 
     // debug animation from console
     window.tl = tl;
-
     // main animation
     tl.addLabel('intro')
       .to(cArm1, 0.5, {x:-149, ease: Back.easeOut.config(1)},'intro+=1')
