@@ -31,6 +31,9 @@ body {
   height: $banner-height;
   background:#ccc;
   font-family: $primary-font;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 // put your stuff here
 
