@@ -95,6 +95,10 @@ App_banner.fn.step1 = function() {
     .addLabel('lastFrame')
     .to([cobalt_arm_1,cobalt_arm_2,cpy_1,cpy_2], 0.6,{y:300},'lastFrame+=1')
     .to([copy_comp,cobalt_logo,cpy_3], 0.8, {y:235},'lastFrame+=1.4');
+
+    if (GSDevTools) {
+        GSDevTools.create();
+    }
 };
 
 //set ids in dom to global variables

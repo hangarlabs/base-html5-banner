@@ -101,4 +101,20 @@ App_banner.fn.step1 = function() {
       .addLabel('lastFrame')
       .to([cArm1,cArm2,cpy1,cpy2], 0.6,{x:300},'lastFrame+=1')
       .to([cpyComp,cLogo,cpy3], 0.8, {x:161},'lastFrame+=1.4');
+
+    if (GSDevTools) {
+        GSDevTools.create();
+    }
+};
+
+//set ids in dom to global variables
+function IDsToVars() {
+    var allElements = document.getElementsByTagName("id");
+
+    for (var q = 0; q < allElements.length; q++) {
+        var el = allElements[q];
+        if (el.id) {
+            window[el.id] = document.getElementById(el.id);
+        }
+    }
 };
