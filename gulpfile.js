@@ -32,6 +32,7 @@ var DIST_PATH = 'dist';
 var SRC_PATH = 'src/banner_list';
 var ZIP_PATH = 'dist';
 var FOLDERS = getFolders(SRC_PATH);
+var GSCONTROL = 'src/scripts/GSDevTools.min.js';
 
 // get banners dirs for process
 function getFolders(dir) {
@@ -91,6 +92,29 @@ gulp.task('scripts', function() {
 
         return gulp.src(path.join(SRC_PATH, FOLDERS, '/js/*.js'))
             .pipe(plumber(function(err) {
+                console.log('SCRIPTS TASK ERROR');
+                console.log(err);
+                this.emit('end');
+            }))
+            .pipe(sourcemaps.init())
+            .pipe(uglify())
+            .pipe(concat('main.js'))
+            .pipe(gulp.dest(DIST_PATH + '/' + FOLDERS + '/js'))
+
+    });
+
+    return (jsTask);
+
+});
+
+gulp.task('scriptsDev', function () {
+
+    console.log('>>>> STARTING SCRIPTS TASK  <<<<');
+
+    var jsTask = FOLDERS.map(function (FOLDERS) {
+
+        return gulp.src([GSCONTROL, path.join(SRC_PATH, FOLDERS, '/js/*.js')])
+            .pipe(plumber(function (err) {
                 console.log('SCRIPTS TASK ERROR');
                 console.log(err);
                 this.emit('end');
@@ -184,7 +208,7 @@ gulp.task('copy', function () {
 // Tasks
 gulp.task('build', ['images', 'templates', 'sass', 'scripts', 'processHtml', 'copy'], function() {});
 
-gulp.task('scaffold', ['images', 'templates', 'sass', 'scripts', 'processHtml'], function() {});
+gulp.task('scaffold', ['images', 'templates', 'sass', 'scriptsDev', 'processHtml'], function() {});
 
 gulp.task('watch', ['scaffold', 'server'], function() {
 
@@ -193,7 +217,7 @@ gulp.task('watch', ['scaffold', 'server'], function() {
     gulp.watch(SRC_PATH + '/**/scss/*.scss', ['sass', browserSync.reload]);
     gulp.watch(SRC_PATH + '/**/img/*.{png,jpeg,jpg,svg,gif}', ['images', browserSync.reload]);
     gulp.watch(SRC_PATH + '/**/pug/*.pug', ['templates', reload]);
-    gulp.watch(SRC_PATH + '/**/js/*.js', ['scripts', browserSync.reload]);
+    gulp.watch(SRC_PATH + '/**/js/*.js', ['scriptsDev', browserSync.reload]);
 });
 
 gulp.task('default', ['clean'], function() {
